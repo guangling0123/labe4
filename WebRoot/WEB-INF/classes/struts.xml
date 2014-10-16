@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<include file="struts-default.xml"/>
+	<package name="hwj" extends="struts-default">
+		<action name="login" class="login.login">
+			<result name="success">/login_success.jsp</result>
+			<result name="failure">/login_failure.jsp</result>
+		</action>
+		
+		<action name="back" class="login.login" method = "back">	
+			<result name="back">/login.jsp</result>		<!--如果返回的值为"back"则跳转-->
+		</action>
+		
+		<action name="index" class="function.function" method = "execute">
+			<result name="display_success">/index.jsp</result>
+		</action>
+		
+		<action name="query" class="function.function" method = "execute">
+			<result name="display_success">/index.jsp</result>
+		</action>
+		
+		<action name="addbook" class="function.function" method = "Addbook">
+			<result name="Add_New_success">/index.jsp</result>
+		</action>
+		
+		<action name="delete" class="function.function" method = "Delete">
+			<result name="Delete_success">/index.jsp</result>
+		</action>
+		
+		<action name="alter" class="function.function" method = "Alter">
+			<result name="Alter_success">/index.jsp</result>
+		</action>
+		
+		<action name="alter_prepare" class="function.function" method = "Alter_prepare">
+			<result name="Alter_prepare">/alter.jsp</result>
+		</action>
+		
+		<action name="getdetail" class="function.function" method = "GetDetail">
+			<result name="GetDetail_success">/detail.jsp</result>
+		</action>
+	</package>
+</struts>    
